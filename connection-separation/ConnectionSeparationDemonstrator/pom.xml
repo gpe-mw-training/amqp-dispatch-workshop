@@ -8,6 +8,7 @@
       <groupId>com.redhat.gpte.amqp.examples</groupId>
       <artifactId>workshop-parent</artifactId>
       <version>1.0</version>
+      <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <groupId>cz.scholz.amqp</groupId>
