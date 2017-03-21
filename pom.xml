@@ -20,7 +20,7 @@ under the License.
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
    <modelVersion>4.0.0</modelVersion>
 
-   <groupId>org.apache.activemq.examples.amqp</groupId>
+   <groupId>com.redhat.gpte.amqp.examples</groupId>
    <artifactId>workshop-parent</artifactId>
    <version>1.0</version>
    <packaging>pom</packaging>
@@ -30,25 +30,12 @@ under the License.
 
       <!-- Configured specifically for JBoss AMQ-7 student lab environment -->
       <qpid.jms.version>0.20.0.redhat-2</qpid.jms.version> 
-      <supported_repos_path>/opt/repos/amq/</supported_repos_path>
-      <amqp.connection.url>amqp://localhost:5672</amqp.connection.url>
-      <queue.name>gpteQueue</queue.name>
 
    </properties>
 
    <modules>
      <module>simple-jms-request-response</module>
+     <module>connection-separation/ConnectionSeparationDemonstrator</module>
    </modules>
-
-   <repositories>
-     <repository>
-      <id>jboss-amq</id>
-      <url>file://${supported_repos_path}/jboss-amq7-7.0.0.ER15-1-maven-repository/maven-repository</url>
-     </repository>
-     <repository>
-      <id>jboss-amq-qpid-jms</id>
-      <url>file://${supported_repos_path}jboss-amq-qpid-jms-0.20.0.redhat-2-maven-repository/maven-repository</url>
-     </repository>
-   </repositories>
 
 </project>

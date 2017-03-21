@@ -21,7 +21,7 @@ under the License.
    <modelVersion>4.0.0</modelVersion>
 
    <parent>
-      <groupId>org.apache.activemq.examples.amqp</groupId>
+      <groupId>com.redhat.gpte.amqp.examples</groupId>
       <artifactId>workshop-parent</artifactId>
       <version>1.0</version>
    </parent>
