@@ -28,8 +28,20 @@ import org.apache.qpid.jms.JmsConnectionFactory;
 
 public class AMQPQueueExample {
 
+   private static final String CONNECTION_URL="CONNECTION_URL";
+   private static final String QUEUE_NAME="QUEUE_NAME";
+
    public static void main(String[] args) throws Exception {
       Connection connection = null;
+
+      String connectionUrl = System.getProperty(CONNECTION_URL);
+      if(connectionUrl != null || connectionUrl == "")
+        throw new RuntimeException("main() must pass the following system property: "+CONNECTION_URL);
+
+      String queueName = System.getProperty(QUEUE_NAME);
+      if(connectionUrl != null || connectionUrl == "")
+        throw new RuntimeException("main() must pass the following system property: "+QUEUE_NAME);
+
       ConnectionFactory connectionFactory = new JmsConnectionFactory("amqp://localhost:5672");
 
       try {
