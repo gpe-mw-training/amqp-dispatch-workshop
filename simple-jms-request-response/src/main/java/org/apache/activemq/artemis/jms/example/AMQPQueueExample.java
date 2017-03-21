@@ -35,11 +35,11 @@ public class AMQPQueueExample {
       Connection connection = null;
 
       String connectionUrl = System.getProperty(CONNECTION_URL);
-      if(connectionUrl != null || connectionUrl == "")
+      if(connectionUrl == null || connectionUrl.equals(""))
         throw new RuntimeException("main() must pass the following system property: "+CONNECTION_URL);
 
       String queueName = System.getProperty(QUEUE_NAME);
-      if(connectionUrl != null || connectionUrl == "")
+      if(queueName == null || queueName.equals(""))
         throw new RuntimeException("main() must pass the following system property: "+QUEUE_NAME);
 
       System.out.println("main() will connect to: "+connectionUrl+" : at the following queue: "+queueName);
