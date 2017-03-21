@@ -42,7 +42,9 @@ public class AMQPQueueExample {
       if(connectionUrl != null || connectionUrl == "")
         throw new RuntimeException("main() must pass the following system property: "+QUEUE_NAME);
 
-      ConnectionFactory connectionFactory = new JmsConnectionFactory("amqp://localhost:5672");
+      System.out.println("main() will connect to: "+connectionUrl+" : at the following queue: "+queueName);
+
+      ConnectionFactory connectionFactory = new JmsConnectionFactory(connectionUrl);
 
       try {
 
@@ -53,7 +55,7 @@ public class AMQPQueueExample {
          Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
          // Step 3. Create a sender
-         Queue queue = session.createQueue("exampleQueue");
+         Queue queue = session.createQueue(queueName);
          MessageProducer sender = session.createProducer(queue);
 
          // Step 4. send a few simple message
