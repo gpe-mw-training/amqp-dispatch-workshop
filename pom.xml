@@ -30,7 +30,7 @@ under the License.
 
       <!-- Configured specifically for JBoss AMQ-7 student lab environment -->
       <qpid.jms.version>0.20.0.redhat-2</qpid.jms.version> 
-      <supported_repos_path>/opt/repos/amq</supported_repos_path>
+      <supported_repos_path>/opt/repos/amq/</supported_repos_path>
 
    </properties>
 
