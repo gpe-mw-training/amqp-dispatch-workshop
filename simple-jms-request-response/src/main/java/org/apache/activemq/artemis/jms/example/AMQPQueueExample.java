@@ -59,7 +59,7 @@ public class AMQPQueueExample {
          MessageProducer sender = session.createProducer(queue);
 
          // Step 4. send a few simple message
-         sender.send(session.createTextMessage("Hello world "));
+         sender.send(session.createTextMessage("Hello world"));
 
          connection.start();
 
@@ -68,7 +68,7 @@ public class AMQPQueueExample {
 
          // Step 7. receive the simple message
          TextMessage m = (TextMessage) consumer.receive(5000);
-         System.out.println("message = " + m.getText());
+         System.out.println("\nmessage = " + m.getText()+"\n");
 
       } finally {
          if (connection != null) {
