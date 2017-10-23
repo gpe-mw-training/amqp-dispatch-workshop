@@ -26,7 +26,7 @@ under the License.
       <version>1.0</version>
    </parent>
 
-   <groupId>org.apache.activemq.examples.amqp</groupId>
+   <groupId>com.redhat.gpte.amqp.examples.simplejms</groupId>
    <artifactId>queue</artifactId>
    <packaging>jar</packaging>
    <version>1.0</version>
