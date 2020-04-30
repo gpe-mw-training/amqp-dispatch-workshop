@@ -67,8 +67,10 @@ public class AMQPQueueExample {
          MessageConsumer consumer = session.createConsumer(queue);
 
          // Step 7. receive the simple message
-         TextMessage m = (TextMessage) consumer.receive(5000);
-         System.out.println("\nmessage = " + m.getText()+"\n");
+         // TextMessage m = (TextMessage) consumer.receive(5000);
+	 // System.out.println("\nmessage = " + m.getText()+"\n");
+         if (consumer.receive(5000) != null)
+	     System.out.println("\nReceived message "+"\n");
 
       } finally {
          if (connection != null) {

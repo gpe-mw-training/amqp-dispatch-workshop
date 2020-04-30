@@ -26,10 +26,12 @@ under the License.
    <packaging>pom</packaging>
    <name>JBoss AMQ Workshop Parent</name>
 
+
    <properties>
 
       <!-- Configured specifically for JBoss AMQ-7 student lab environment -->
-      <qpid.jms.version>0.21.0.redhat-1</qpid.jms.version>
+      <!-- <qpid.jms.version>0.21.0.redhat-1</qpid.jms.version> -->
+    <qpid.jms.version>0.48.0.redhat-00004</qpid.jms.version>
 
    </properties>
 
@@ -42,7 +44,7 @@ under the License.
        <repository>
          <id>amq7-repository</id>
         <name>Red Hat JBoss AMQ 7 repository</name>
-         <url>file:///opt/repos/amq/jboss-amq-7.0.1.GA-maven-repository/maven-repository</url>
+         <url>file:///opt/repos/amq-broker-7.6.0.GA-maven-repository/maven-repository</url>
          <releases>
              <enabled>true</enabled>
          </releases>
@@ -53,7 +55,8 @@ under the License.
        <repository>
           <name>Red Hat AMQ 7 Qpid JMS repository</name>
            <id>amq-qpid-jms</id>
-           <url>file:///opt/repos/amq/jboss-amq-qpid-jms-0.21.0.redhat-1-maven-repository/maven-repository</url>
+           <!-- <url>file:///opt/repos/amq/jboss-amq-qpid-jms-0.21.0.redhat-1-maven-repository/maven-repository</url> -->
+           <url>https://mvnrepository.com/artifact/org.apache.qpid/qpid-jms-client</url>
            <releases>
                <enabled>true</enabled>
            </releases>
@@ -105,7 +108,7 @@ under the License.
    <pluginRepository>
        <id>amq7-repository</id>
        <name>Red Hat JBoss AMQ 7 repository</name>
-       <url>file:///opt/repos/amq/jboss-amq-7.0.1.GA-maven-repository/maven-repository</url>
+       <url>file:///opt/repos/amq-broker-7.6.0.GA-maven-repository/maven-repository</url>
        <releases>
            <enabled>true</enabled>
        </releases>
@@ -116,7 +119,8 @@ under the License.
    <pluginRepository>
        <id>amq-qpid-jms</id>
        <name>Red Hat AMQ 7 Qpid JMS repository</name>
-       <url>file:///opt/repos/amq/jboss-amq-qpid-jms-0.21.0.redhat-1-maven-repository/maven-repository</url>
+       <!-- <url>file:///opt/repos/amq/jboss-amq-qpid-jms-0.21.0.redhat-1-maven-repository/maven-repository</url> -->
+       <url>https://mvnrepository.com/artifact/org.apache.qpid/qpid-jms-client</url>
        <releases>
            <enabled>true</enabled>
        </releases>
