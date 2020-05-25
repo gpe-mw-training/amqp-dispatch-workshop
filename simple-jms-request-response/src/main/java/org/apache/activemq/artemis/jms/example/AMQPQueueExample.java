@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 //package com.redhat.gpte.amqp.examples.simplejms;
-package org.apache.activemq.artemis.jms.example.AMQPQueueExample
+package org.apache.activemq.artemis.jms.example;
 
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
