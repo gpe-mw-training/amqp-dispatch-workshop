@@ -14,7 +14,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.redhat.gpte.amqp.examples.simplejms;
+//package com.redhat.gpte.amqp.examples.simplejms;
+package org.apache.activemq.artemis.jms.example.AMQPQueueExample
 
 import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
